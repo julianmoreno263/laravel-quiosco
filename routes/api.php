@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\CategoriaController;
 
 /*
@@ -26,3 +27,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 //rutas, con el metodo de laravel apiResource no debemos preocuparnos por estar dandoles nombres a cada controlador para cada peticion http que vayamos a usar,como get,delete,etc, con este metodo laravel automaticamente asocia los nombres de las funciones con las peticiones http.
 Route::apiResource('/categorias',CategoriaController::class);
+Route::apiResource('/productos',ProductoController::class);
+
