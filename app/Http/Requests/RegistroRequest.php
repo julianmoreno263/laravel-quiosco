@@ -34,4 +34,17 @@ class RegistroRequest extends FormRequest
 
         ];
     }
+
+    public function messages(){
+
+        return [
+
+            'name'=>'El nombre es obligatorio',
+            'email.required'=>'El email es obligatorio',
+            'email.email'=>'El email no es válido',
+            'email.unique'=>'El usuario ya está registrado',
+            'password'=>'El password debe contener al menos 8 caracteres, un símbolo y un número',
+
+        ];
+    }
 }
